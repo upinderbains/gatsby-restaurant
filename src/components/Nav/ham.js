@@ -20,7 +20,7 @@ const StyledHam = styled.div`
   div {
     width: 100%;
     height: 0.4rem;
-    background-color: var(--color-coral);
+    background-color: var(--color-white);
     border-radius: 20px;
     transform-origin: 1px;
     transition: all 0.2s linear;
@@ -47,7 +47,7 @@ const List = styled.ul`
   align-items: center;
   flex-flow: column;
   padding-top: 10rem;
-  background-color: var(--color-navy-light);
+  background: rgb(221, 23, 59, 0.7);
   transition: all 0.3s;
   transform: ${props => (props.show ? "translateX(0)" : "translateX(100vw)")};
   display: none;
@@ -59,23 +59,25 @@ const List = styled.ul`
 const ListItem = styled.li`
   display: block;
   width: 100%;
-  padding: 1.5rem;
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.5s;
   .active {
-    color: var(--color-coral);
+    background-color: var(--color-white);
+    color: var(--color-main);
   }
-
   &:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
   }
 `
 const ListLink = styled(Link)`
-  font-size: var(--fs-3);
+  font-size: var(--fs-5);
   color: var(--color-white);
-  transition: all 0.3s;
+  transition: all 0.5s;
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
   &:hover {
-    color: var(--color-coral);
+    color: var(--color-main);
   }
 `
 

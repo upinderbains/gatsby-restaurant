@@ -4,7 +4,6 @@ const GlobalStyles = createGlobalStyle`
 :root {
     --color-primary: #020c1b;
     --color-secondary: #0B3C5D;
-    --color-navy-light: rgba(11,60,93,0.8);
     --color-white: #ffffff;
     --color-pink: #EC576B;
     --color-button-light: rgba(16, 16, 16, 0.3);

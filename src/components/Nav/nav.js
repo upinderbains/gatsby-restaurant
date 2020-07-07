@@ -21,13 +21,16 @@ const Container = styled.nav`
   box-shadow: ${props =>
     props.scroll === "up" ? `0 0.5rem 2rem rgba(0, 0, 0, 0.65)` : "none"};
   transform: translateY(
-    ${props => (props.scroll === "down" ? `-70px` : "0px")}
+    ${props => (props.scroll === "down" ? `-80px` : "0px")}
   );
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
+  @media (max-width: 768px) {
+    transform: translateY(0px);
+  }
 
   .nav {
     max-width: 1500px;
