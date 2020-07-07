@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { Button } from "../../styles/"
 import styled from "styled-components"
 import { DispatchContext } from "../../context/GlobalContext"
-import { ADD_CART, INCREASE_ITEM, SET_COUNT } from "../../context/actions"
+import { ADD_CART, SET_COUNT } from "../../context/actions"
 
 const Wrapper = styled.div`
   display: flex;
@@ -102,10 +102,10 @@ const Product = ({ product, cart }) => {
                   banner
                   onClick={() => addToCart(id)}
                   disabled={
-                    added.length > 0 && added.some(value => value == id)
+                    added.length > 0 && added.some(value => value === id)
                   }
                 >
-                  {added.length > 0 && added.some(value => value == id)
+                  {added.length > 0 && added.some(value => value === id)
                     ? "added"
                     : "add to cart"}
                 </StyledButton>

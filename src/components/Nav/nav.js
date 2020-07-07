@@ -91,8 +91,9 @@ const ListLink = styled(Link)`
   }
 `
 const StyledImg = styled.img`
-  width: 100px;
-  margin: 10px 50px;
+  width: 80px;
+  height: 80px;
+  margin: 0px 50px;
 `
 
 const Nav = () => {

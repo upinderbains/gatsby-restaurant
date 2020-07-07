@@ -131,7 +131,7 @@ const GlobalContext = ({ children }) => {
   useEffect(() => {
     dispatch({ type: SET_CART, payload: edges })
     dispatch({ type: SET_COUNT })
-  }, [])
+  },[])
   useEffect(() => {
     localStorage.setItem("state", JSON.stringify(state))
   }, [state])
