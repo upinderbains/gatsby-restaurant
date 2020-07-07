@@ -1,42 +1,24 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import BackgroundImage from "gatsby-background-image"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = ({ img, children, home }) => (
+  <StyledBackgroundImage fluid={img} index={home}>
+    {children}
+  </StyledBackgroundImage>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
+
+const StyledBackgroundImage = styled(BackgroundImage)`
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: ${props => (props.index ? "calc(100vh - 70px)" : "60vh")};
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
