@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
-import Title from "../Title"
+import Title from '../title'
 import { Section } from "../../styles"
 import Img from "gatsby-image"
 
